@@ -21,8 +21,8 @@ async def home():
         return file.read()
 
 
-@app.post("/ask")
-async def ask(question: str = Form(...)):
+@app.post("/generate")
+async def generate(question: str = Form(...)):
     try:
         response = client.chat.completions.create(
             model="llama-3.3-70b-versatile",

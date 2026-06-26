@@ -14,7 +14,7 @@ async function askAI() {
 
     try {
 
-        const response = await fetch("/ask", {
+        const response = await fetch("/generate",  {
             method: "POST",
             body: formData
         });
